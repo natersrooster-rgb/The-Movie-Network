@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Movie Network</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>The Movie Network</h1>
+        <p>Enter your absolute favorite movie, and we'll decode your taste.</p>
+        
+        <div class="input-box">
+            <input type="text" id="favMovie" placeholder="e.g., Inception, Interstellar, Shrek...">
+            <button onclick="analyzeTaste()">Analyze My Taste</button>
+            <button onclick="randomizeMovie()" style="background: #333; color: #f5c518; border: 1px solid #f5c518; cursor: pointer; padding: 10px 15px; border-radius: 4px; font-weight: bold;">🎲 Surprise Me</button>
+        </div>
+
+        <!-- Results will appear here -->
+        <div id="results" class="hidden">
+            <div class="taste-profile">
+                <h2>Your Taste Profile</h2>
+                <p id="tasteAnalysis"></p>
+            </div>
+            
+            <h2>Recommended for You</h2>
+            <div id="recommendationGrid" class="grid"></div>
+        </div>
+
+        <!-- Watchlist Section -->
+        <div id="watchlistContainer" style="margin-top: 30px; padding: 15px; background: #1a1a1a; border-radius: 5px; color: #fff;">
+            <h3>My Network Watchlist (0)</h3>
+            <p style="font-size: 12px; color: #888;">No movies added yet. Click '+ Add to Watchlist' on recommendations!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

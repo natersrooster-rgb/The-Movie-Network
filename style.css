@@ -1,0 +1,287 @@
+body {
+    background-color: #121214;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.input-box input {
+    padding: 12px;
+    width: 60%;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+.input-box button {
+    padding: 12px 20px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+.taste-profile {
+    background-color: #1f1f23;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.movie-card {
+    background-color: #e50914;
+    padding: 20px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.hidden {
+    display: none;
+}
+/* Network Visual Container */
+#recommendationGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 30px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    min-height: 400px;
+}
+
+/* Center Movie Node */
+.center-node {
+    background: #f5c518 !important;
+    color: #000 !important;
+    border: 2px solid #fff;
+    font-size: 1.1em;
+    padding: 15px;
+    box-shadow: 0 0 20px rgba(245, 197, 24, 0.6);
+    z-index: 10;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Recommended Movie Nodes */
+.network-node {
+    background: #222;
+    border: 1px solid #444;
+    padding: 12px;
+    border-radius: 6px;
+    color: #fff;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    min-width: 140px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.network-node:hover {
+    transform: scale(1.05);
+    border-color: #f5c518;
+    box-shadow: 0 0 12px rgba(245, 197, 24, 0.4);
+}
+/* Network Visual Container */
+#recommendationGrid {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: #0d0d0d;
+    border: 1px solid #333;
+    border-radius: 8px;
+    min-height: 450px;
+    overflow: hidden;
+}
+
+/* SVG Overlay for Network Connection Lines */
+.network-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to pass through to buttons */
+    z-index: 1;
+}
+
+/* Center Movie Node (Hub) */
+.center-node {
+    position: relative;
+    z-index: 5;
+    background: #f5c518 !important;
+    color: #000 !important;
+    border: 2px solid #fff;
+    font-size: 1.1em;
+    padding: 16px 20px;
+    box-shadow: 0 0 25px rgba(245, 197, 24, 0.7);
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+/* Connected Recommendation Nodes */
+.network-node {
+    position: relative;
+    z-index: 5;
+    background: #1a1a1a;
+    border: 1px solid #444;
+    padding: 12px 15px;
+    border-radius: 6px;
+    color: #fff;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    min-width: 140px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.network-node:hover {
+    transform: scale(1.08);
+    border-color: #f5c518;
+    box-shadow: 0 0 15px rgba(245, 197, 24, 0.5);
+}
+/* Terminal / Cyber Network Container */
+#recommendationGrid {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 30px;
+    background: radial-gradient(circle at center, #111827 0%, #030712 100%);
+    border: 1px solid #f5c518;
+    border-radius: 12px;
+    min-height: 500px;
+    overflow: hidden;
+    box-shadow: inset 0 0 40px rgba(245, 197, 24, 0.1);
+}
+
+/* Background Radar/Grid Overlay */
+#recommendationGrid::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+}
+
+/* SVG Network Layer */
+.network-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Central Hub Node (Core Node) */
+.center-node {
+    position: relative;
+    z-index: 10;
+    background: #f5c518 !important;
+    color: #000 !important;
+    border: 2px solid #fff;
+    font-size: 1.2em;
+    padding: 18px 25px;
+    box-shadow: 0 0 35px rgba(245, 197, 24, 0.8), inset 0 0 10px rgba(255,255,255,0.5);
+    text-align: center;
+    border-radius: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin: 20px;
+    animation: hubPulse 3s infinite alternate;
+}
+
+@keyframes hubPulse {
+    0% { box-shadow: 0 0 20px rgba(245, 197, 24, 0.6); }
+    100% { box-shadow: 0 0 40px rgba(245, 197, 24, 0.9); }
+}
+
+/* Neural Network Nodes */
+.network-node {
+    position: relative;
+    z-index: 5;
+    background: rgba(17, 24, 39, 0.85);
+    border: 1px solid rgba(245, 197, 24, 0.4);
+    padding: 14px;
+    border-radius: 8px;
+    color: #f3f4f6;
+    text-align: center;
+    transition: all 0.3s ease;
+    min-width: 150px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+.network-node:hover {
+    transform: translateY(-4px) scale(1.05);
+    border-color: #f5c518;
+    background: rgba(31, 41, 55, 0.95);
+    box-shadow: 0 0 20px rgba(245, 197, 24, 0.5);
+}
+
+/* Node Watchlist Button */
+.network-node button {
+    margin-top: 8px;
+    background: transparent;
+    color: #f5c518;
+    border: 1px solid #f5c518;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 11px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.network-node button:hover {
+    background: #f5c518;
+    color: #000;
+}
+/* Animated data pulse for SVG connection lines */
+@keyframes dashPulse {
+    to {
+        stroke-dashoffset: -20;
+    }
+}
+.network-svg line {
+    animation: dashPulse 1.5s linear infinite;
+}
+
+/* Network Stats HUD */
+.network-hud {
+    display: flex;
+    justify-content: space-around;
+    background: #111;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #f5c518;
+    font-family: monospace;
+}
+
+/* Make recommendation nodes fully interactive click targets */
+.network-node {
+    cursor: pointer;
+}
